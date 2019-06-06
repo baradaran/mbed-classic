@@ -99,10 +99,10 @@ typedef enum {
     P0_30 = p30,
 
     //PADS
-    PAD3 = p1,
-    PAD2 = p2,
-    PAD1 = p3,
-    
+    PAD1 = p0,
+    PAD2 = p1,
+    PAD3 = p2,
+    PAD4 = p22,
 
     //LED MATRIX COLS
     COL1 = p4,
@@ -120,44 +120,39 @@ typedef enum {
     ROW2 = p14,
     ROW3 = p15,
 
-    //NORMAL PIN (NO SPECIFIED FUNCTIONALITY)
-    //PIN_16
+    A_RX = p26,
+    A_TX = p27,
 
-    // BUTTON A
+    //BUTTON A and B
     BUTTON_A = p17,
-    
+    BUTTON_B = p16,
 
-    //NORMAL PIN (NO SPECIFIED FUNCTIONALITY)
-    //PIN_18
-    
-    //TARGET RESET
-    TGT_NRESET = p19,
+    //RGB LED (WS2812b)
+    RGBLED = p18,
 
-    //NORMAL PIN (NO SPECIFIED FUNCTIONALITY)
-    //PIN_20
+    //MOTOR DRIVER
+    MOTOR_NSLEEP = p28,
+    MOTOR_IN1 = p29,
+    MOTOR_IN2 = p30,
 
-    //MASTER OUT SLAVE IN
-    MOSI = p21,
-    
-    //MASTER IN SLAVE OUT
-    MISO = p22,
+    //MICROPHONE
+    MIC = p3,
 
-    //SERIAL CLOCK
-    SCK = p23,
+    //I2C
+    SCL = p19,
+    SDA = p20,
+
+    MOSI = p9,
+    MISO = p8,
+    SCK = p7,
 
     // RX AND TX PINS
     TGT_TX = p24,
     TGT_RX = p25,
 
-    //BUTTON B
-    BUTTON_B = p26,
-    
-    //ACCEL INTERRUPT PINS (MMA8653FC)
-    ACCEL_INT2 = p27,
-    ACCEL_INT1 = p28,
+    //ACCEL INTERRUPT PIN (BMX055)
+    ACCEL_INT = p21,
 
-    //MAGENETOMETER INTERRUPT PIN (MAG3110)
-    MAG_INT1 = p29,
 
     // Not connected
     NC = (int)0xFFFFFFFF,
@@ -174,13 +169,13 @@ typedef enum {
     LED1    = PAD1,
     LED2    = PAD2,
     LED3    = PAD3,
-    LED4    = P0_16,
+    LED4    = PAD4,
 
     //SDA (SERIAL DATA LINE)
-    I2C_SDA0 = p30,
+    I2C_SDA0 = SDA,
 
     //SCL (SERIAL CLOCK LINE)
-    I2C_SCL0 = p0
+    I2C_SCL0 = SCL
 
 } PinName;
 
